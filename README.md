@@ -1,2 +1,2 @@
 # interactive-animation
-# creative coding assignment 2
+creative coding assignment 2

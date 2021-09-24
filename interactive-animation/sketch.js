@@ -23,7 +23,7 @@ function draw() {
       textSize(20);
       text("-press enter to toggle animation on/off", width / 2, 200);
       text("-press shift to toggle between horizontal \n and vertical movement", width / 2, 250);
-      text("-press alt to change color palette", width / 2, 325);
+      text("-press backspace to change color palette", width / 2, 325);
       text("-press up and down arrow keys \n to increase/decrease size", width / 2, 375);
       beginning = false;
     }
@@ -31,7 +31,7 @@ function draw() {
     loop();
   }
   range = 200;
-  //cycles fill colors from pink to purple
+  //cycles fill colors through color palette
   if (colorPalette == 1) {
     r = ((frameCount % range) * 2);
     g = (frameCount % range);
@@ -81,7 +81,7 @@ function keyPressed() {
   if (keyCode == SHIFT) { //change direction
     direction++;
   }
-  if (keyCode == ALT) {
+  if (keyCode == BACKSPACE) {
     if (colorPalette == 3) {
       colorPalette = 1;
     } else {
